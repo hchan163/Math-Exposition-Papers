@@ -1,3 +1,6 @@
+I tried putting through the file through a markdown converter I found online, and figured I might as well include it here for now.
+As you can see the results are not ideal.
+
 ## Preface
 Before we begin, two theorems I would like to be kept in mind is the Weierstrass Factorization Theorem and the theorem of Mittag-Leffler.
 These two theorems will motivate every single definition that shows up in this document.
