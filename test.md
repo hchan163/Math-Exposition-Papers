@@ -1,6 +1,6 @@
 # Notice
-As a test, I tried putting through one of my files through a markdown converter I found online, and figured I might as well include it here for now.
-As you can see the results are not ideal.
+As a test, I tried running one of my files through an AI to convert it into bare markdown, and figured I might as well include it here for now.
+As you can see the results are not ideal, and a lot of the latex is not rendering properly.
 
 - - -
 
