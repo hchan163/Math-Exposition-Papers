@@ -1,0 +1,131 @@
+\documentclass{article}
+\input{HChan/HCImports}
+
+\title{Hartshorne Chapter 1}
+\author{H.C.}
+\date{June 2025}
+
+\begin{document}
+\maketitle
+
+\section*{Section 1.1}
+\subsection*{Question 1.1}
+
+\noindent a)
+
+$A(Y) := k[x,y]/\gen{y-x^2} = k[x][y]/\gen{y-x^2} \simeq k[x][x^2] = k[x]$. \qed
+
+\noindent b)
+
+Suppose that $A(Z) := k[x,y]/\gen{xy-1} \simeq k[t]$. Then note that $\overline {xy} = 1$, i.e. both $\overline x$ and $\overline y$ are units. Then the image of $x,y$ under any such isomorphism must be in $k$ as the units of $k[t]$ are exactly the elements of the base field. But then the image of the entire ring is $k$, and is thus not an isomorphism. \qed
+
+\noindent c)
+
+Let $ax^2 + bxy + cy^2 + dx + ey + f \in k[x,y]$ be some arbitrary degree two polynomial. There are three cases.
+
+\begin{enumerate}
+    \item $a = c = 0$. First send $x$ to $x-e$, and extend everything else linearly to get an automorphism of $k[x,y]$. Observe that the $x$-term is cancelled out, such that we can assume $d=0$ WLOG. Equally the automorphism given by $y \mapsto y - d$ allows us to assume $e = 0$. Hence we get that the polynomial is isomorphic to $bxy - f$ where $b$ is necessarily nonzero as it must be a degree two polynomial and $f$ is as well or else the polynomial is no longer irreducible. Normalize by taking $x \mapsto \frac{f}{b}x$ and factor out the common term $f$ to get an isomorphism from the initial polynomial to $xy-1$. Hence $A(W) \simeq A(Z)$ and we are done.
+    
+    \item $a\neq0, c=0$. First using only the $a\neq0$ assumption, the automorphisms $x \mapsto x - \frac{b}{2a}y$ eliminates $b$, and $x \mapsto x - \frac{d}{2a}$ eliminates $d$. Hence the initial polynomial is isomorphic to $ax^2 + cy^2 + ey + f$.
+    
+    Now normalize everything via $x \mapsto \frac{1}{\sqrt{a}}x, y \mapsto \frac{-1}{e}y$ to get $x^2 - y + f$. Finally via $y \mapsto y - f$ we get $x^2 - y$. Hence $A(W) \simeq A(Y)$ and we are done.
+    
+    \item $a,c \neq 0$. By the result above we get $ax^2 + cy^2 + ey + f$. The isomorphism $y \mapsto y-\frac{e}{2c}$ eliminates $e$. Next normalize and scale everything via $x \mapsto \sqrt{\frac{-f}{a}}, y \mapsto \frac{-f\sqrt{-1}}{c}y$ and factor out $-f$ to get $x^2 - y^2 -1 = (x+y)(x-y) -1$. But then $k[x,y] = k[x+y,x-y]$, so it is isomorphic to $xy-1$. Hence $A(W) \simeq A(Z)$ and we are done. \qed
+\end{enumerate}
+
+\subsection*{Question 1.2}
+
+Consider the quotient ring homomorphism $\pi: k[x,y,z] \to k[x,y,z]/\gen{y-x^2,z-x^3}$. Then $f(x,y,z) \in \ker \pi \Longleftrightarrow \pi(f(x,y,z)) = f(\pi(x),\pi(y),\pi(z)) = f(x,x^2,x^3) = 0 \Longleftrightarrow f \in I(Y)$. Hence $I(Y) = \gen{y-x^2, z-x^3}$, and $A(Y) = k[x,y,z]/\gen{y-x^2, z-x^3} \simeq k[x]$. Note that $k[x]$ has dimension $1$, so $Y$ it a dimension $1$ affine variety. \qed
+
+\subsection*{Question 1.3}
+
+To describe the algebraic set $Y \subset \mathbf A^3$, it suffices to find all points that vanish on the generating polynomials.
+
+If $(x_0,y_0,z_0)$ satisfy $zx-x$ then either $x_0=0$ or $z_0=1$ as $k$ is a field.
+
+If $x_0=0$, then $-y_0z_0=0$ and thus $y_0 = 0$ or $z_0 = 0$ once again. These correspond to the lines $\gen{0,0,t}$ and $\gen{0,t,0}$ where $t$ varies over $k$. Moreover their ideals are $\gen{x,y}$ and $\gen{x,z}$ respectively, where both are prime ideals and hence correspond to irreducible components of $Y$.
+
+If $z_0 = 1$ Then $x_0^2 =y_0$. This corresponds to the curve $\gen{t,t^2,1}$ with ideal $\gen{x^2-y,z-1}$. Note that $k[x,y,z]/\gen{x^2-y,z-1} \simeq k[x,x^2,1] = k[x]$ so it is a prime ideal, and so this is the third and final irreducible component. \qed
+
+\subsection*{Question 1.4}
+
+We have that the Zariski topology $\mathbf{A}^1$ is exactly the cofinite topology.
+
+But then notice that $(\mathbf{A}^1\times(\mathbf{A}^1\setminus\set{y_0}))\cup((\mathbf{A}^1\setminus\set{x_0})\times\mathbf{A}^1) =(\mathbf{A}^1\times\mathbf{A}^1)\setminus(x_0,y_0)$ such that $\mathbf{A}^1\times \mathbf{A}^1$ is the discrete topology.
+
+In particular, let $(x_0,y_0)$ be some open point such that its complement is equal to $Z(I)$ for some $I\lhd k[x,y]$. But then if $f(x,y)\in I$ then $f$ has the property such that $f(x_1,y)=0$ for all $x_1\neq x_0$, such that $f$ is divisible by infinitely many polynomials of the form $(x-x_1)$.
+
+Hence $f=0$ necessarily, and $I=\set0$, which is a contradiction as $Z(\set0) = \mathbf{A}^2$. \qed
+
+\subsection*{Question 1.5}
+
+$B$ is a finitely generated $k$-algebra with no nilpotent elements iff $B \simeq k[x_1, \dots, x_n] / \mathfrak a$ as $k$-algebras, where $\mathfrak a \lhd A$ such that $\sqrt{\mathfrak a} = \mathfrak a$.
+
+But then by Hilbert's Nullstellensatz, the coordinate ring of every algebraic set in $\mathbf{A}^n$ is isomorphic to $A/\mathfrak a$, where $\mathfrak a$ is a radical ideal. Hence we get equivalence. \qed
+
+\subsection*{Question 1.6}
+
+Skipped.
+
+\subsection*{Question 1.7}
+
+Skipped.
+
+\subsection*{Question 1.8}
+
+Let $\mathfrak p := Z(Y)$ and $Z(H)$ be given by the irreducible polynomial $f$. Then note that $Z(Y \cap H) = \gen{\mathfrak p, f}$, such that the irreducible components of $Y \cap H$ correspond to minimal prime divisors of the ideal $\gen{\mathfrak p, f}$. As $Y \subsetneq H$, $\gen{f} \subsetneq \mathfrak p$. Hence by the correspondence theorem, such minimal prime divisors $\mathfrak q$ correspond to minimal prime divisors $\bar{\mathfrak q}$ of $\bar f \neq 0$ in $A(Y) \simeq k[x_1,\dots, x_n]/ \mathfrak p$, so $\text{ht}(\bar{\mathfrak q}) \geq 1$. But then by Krull’s Principal Ideal Theorem $\text{ht}(\bar{\mathfrak q}) \leq 1$, and $\set{0} \subsetneq \bar{\mathfrak q}$ such that $\text{ht}(\bar{\mathfrak q}) = 1$. Hence $\dim(\mathfrak q) = (n-r)+1$, such that $\dim(Z(\mathfrak q)) = n - ((n-r)+1) = r-1$. \qed
+
+\subsection*{Question 1.9}
+
+Straightforward application of Krull’s height theorem. \qed
+
+\newpage
+\subsection*{Question 1.10}
+
+\noindent a)
+
+It suffices to prove that if $Y$ is a subspace of $X$ such that $Z$ is irreducible in $Y$, then it is irreducible in $X$.
+
+Suppose that $Z = A \cup B$ in $X$ where $A$ and $B$ are closed. Then $Z = (A \cap Y) \cup (B \cap Y)$ in $Y$, such that WLOG $B \cap Y = \emptyset$. But then $B \subseteq Y$ such that $Z \subseteq A$, and we are done. \qed
+
+\noindent b)
+
+First, by (a) we have that $\dim X \geq \sup \dim U_i$.
+
+Now let $Z_0 \subsetneq \dots \subsetneq Z_n \subsetneq \dots$ be a chain of irreducible closed subsets in $X$. Next, notice if there exists $U_1, U_2$ in the open cover such that $Z_0 \cap U_1, Z_0 \cap U_2 \neq \emptyset$, $\{U_1^C \cap Z_0, U_2^C \cap Z_0\}$ is a closed cover for $Z_0$ such that it is not irreducible, which is a contradiction. Hence there exists a $U_0$ such that $Z_0 \subseteq U_0$.
+
+Now, by 1.6, $Z_i \cap U_0$ is dense in $Z_i$ for all $i$. Hence if there existed $Z_i \subsetneq Z_{i+1}$ such that $Z_i \cap U_0 = Z_{i+1} \cap U_0$, taking closures on both sides we observe that $Z_i = Z_{i+1}$, which is not possible. Hence $Z_0 \cap U_0 \subsetneq \dots \subsetneq Z_n \cap U_0 \subsetneq \dots$ is a chain of irreducible closed subsets in $U_0$, and $\dim X \leq \sup \dim U_i$. \qed
+
+\noindent c)
+
+Consider the topology $\mathcal T$ on $[0,2]$ where the open sets are given to be $\set{\emptyset, [0,1), [0,2]}$. Then $\dim(\mathcal T) = 1$ but $\dim([0,1)) = 0$. \qed
+
+\noindent d)
+
+Suppose that $Y$ is a closed subset of a irreducible finite dimensional topological space $X$, such that $\dim Y = \dim X$.
+
+Suppose that $Z_0 \subsetneq Z_1 \subsetneq \dots \subsetneq Z_n$ is a maximal chain of irreducible closed sets. It suffices to prove that there exists no closed sets between $Z_n$ and $X$. Hence, if it is nonempty, let $Z := \bigcap_{Z_n \subsetneq Z' \subseteq X}Z'$ be the intersection of all such closed sets. Then $Z$ cannot be irreducible, such that $Z = A \cup B$. Then $Z_n$ must be contained entirely with $A$ or $B$ as it is irreducible, such that WLOG $Z = A \subsetneq Z$ and we get a contradiction. \qed
+
+\noindent e)
+
+Consider the topology on $[0, \infty)$ where the closed sets are given to be $\set{\emptyset, [0,1], [0,2], \dots, [0,\infty)]}$. Then notice that the closed sets form a totally ordered chain, such that their finite union and arbitrary intersection is well-defined and also of the form $[0,n]$. But then every closed set is irreducible such that the topology has infinite dimension. It can also be seen that this topology is Noetherian as $[0,n]$ contains exactly $n$ nonempty closed sets. \qed
+\lspace
+
+\subsection*{Question 1.11}
+
+Consider the map $\phi: \mathbf{A}^1 \to Y$ given by $t \mapsto (t^3, t^4, t^5)$. It is clearly surjective. Now suppose that $(t^3,t^4,t^5) = (t'^3,t'^4,t'^5)$. Then by considering the first coordiante, $t$ and $t'$ can only differ by a third root of unity. On the other hand by considering the third coordinate they can only differ by a fifth root of unity; hence $t = t'$ and $\phi$ is bijective.
+
+Next, the Zariski topology on $\mathbf{A}^1$ is exactly the cofinite topology, such that the image of a proper closed set under $\phi$ must be a finite set. But then singletons are closed as they correspond to maximal ideals in $k[x,y,z]$, such that the finite collection of points is also closed. The map is closed.
+
+Finally suppose that $S = Z(I) \cap Y$ is some proper closed set in $Y$. By definition, a point $(t^3,t^4,t^5)$ is in $S$ iff there exists an $f(x,y,z) \in I$ such that $f(t^3,t^4,t^5) = 0$. But then $t$ must also be a root of the polynomial $f(x^3,x^4,x^5)$. The map is continuous, and defines a bijection. Thus $\dim(Y) = \dim(\mathbf{A}^1) = 1$. Hence we have that $\text{ht}I(Y) = \dim(k[x,y,z]) - \dim(Y) = 2$.
+
+Now, by a similar proof as in 1.2, $A(Y) = k[x,y,z]/\gen{x^5-z^3, x^4-y^3, y^5-z^4}$.
+\lspace
+
+\noindent \textit{Remark. how the hell do you prove it can't be generated by $2$ elements.}
+
+\subsection*{Question 1.12}
+
+Let $f(x,y) := (x^2-1)^2 + y^2 \in \R[x,y]$. Then it is irreducible, but $Z(f) = \set{(1,0), (-1,0)}$ which is not irreducible. \qed
+
+\end{document}

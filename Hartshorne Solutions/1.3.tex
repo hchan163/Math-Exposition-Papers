@@ -1,0 +1,161 @@
+\documentclass{article}
+\input{HChan/HCImports}
+
+\title{Hartshorne Chapter 1}
+\author{H.C.}
+\date{August 2025}
+
+\begin{document}
+\maketitle
+
+\section*{Section 1.3}
+\subsection*{Question 3.1}
+
+\noindent a)
+
+By the result of Question 1.1, if $Y \subseteq \mathbf{A}^2$ is a conic then $I(Y)$ is isomorphic to either $k[x]$ or $k[x,y]/\gen{xy-1}$. It is clear that $k[x]$ is the coordinate ring of $\mathbf{A}^1$, and we get isomorphism in the first case. On the other hand, note that $Z(xy-1) \subseteq \mathbf{A}^2$ is given by $\set{(x, \frac{1}{x})\mid x \in k \setminus \set0}$ such that it is isomorphic to $\mathbf{A}^1 \setminus \set0$ via the map $(x,\frac{1}{x})\mapsto x$. \qed
+
+\noindent b)
+
+Suppose $U \subset \mathbf{A}^1$ is any open set. Let $z \in \mathbf{A}^1 \setminus U$ be any point not contained in $U$, such that the rational function $\frac{1}{x-z}$ is regular on $U$. But then $\mathcal{O}(U)$ has a nonconstant invertible function, such that $\mathcal{O}(U)$ cannot be isomorphic to $\mathcal{O}(\mathbf{A}^1) \simeq k$. Thus $\mathbf{A}^1$ is never isomorphic to any proper open subset of itself. \qed
+
+\noindent c)
+
+How do you do this
+
+\noindent d)
+
+By the result of Question 3.7, any two curves in $\mathbf{P}^2$ has nonempty intersection. But then that is not the case in $\mathbf{A}^2$ (choose any two parallel lines). Hence they cannot be isomorphic, as any homeomorphism preserves the dimension of sets. \qed
+
+\noindent e)
+
+If a projective variety $X$ is isomorphic to an affine variety $Y$, the definition of isomorphism necessarily gives a bijection between globally regular functions such that $A(Y)$ must be isomorphic to $\mathcal{O}(Y) \simeq k$. But then by Nullstellensatz, the ideal of $Y$ is maximal and hence $Y$ is a singular point. \qed
+\lspace
+
+\subsection*{Question 3.2}
+
+\noindent a)
+
+That $\varphi$ defines a homemorphism is clear, both inherit the cofinite topology. Moreover by Lemma 3.6 it is also immediate that it defines a morphism.
+
+Consider the regular function on $\mathbf{A}^1 \setminus \set{0}$ given by $t \mapsto \frac{1}{t}$. Then if $\varphi$ were to be a isomorphism, its pullback $(t^2,t^3) \mapsto \frac{1}{t}$ on $\varphi(\mathbf{A}^1) \setminus \set{(0,0)}$ would have to be regular as well. But then there exists polynomials $f,g$ such that $\frac{f(t^2,t^3)}{g(t^2,t^3)} = \frac{1}{t}$, where $g$ is a polynomial that vanishes nowhere on $\varphi(\mathbf{A}^1)$ except potentially at $(0,0)$. But then it can only be equal to $ct$ or $c$; and the first is impossible as it is a polynomial in $t^2,t^3$ and the second is impossible as that would imply the polynomial $f$ is the rational function $\frac{1}{t}$. \qed
+
+\noindent b)
+
+Suppose that $t^p = t'^p$. Then $t^p - t'^p = (t-t')^p =0$ such that $\varphi$ is injective. As the base field is algebraically complete, that $\varphi$ is surjective is also clear. By the same reasoning as in (a), $\varphi$ defines a homemorphism as both inherit the cofinite topology. Moreover by Lemma 3.6 it is also immediate that it defines a morphism.
+
+The same proof as done in (a) can be repeated to show that the regular function $t \mapsto \frac{1}{t}$ cannot pull back to a regular function on $\varphi(\mathbf{A}^1)$. Hence it is not an isomorphism. \qed
+\lspace
+
+\subsection*{Question 3.3}
+
+\noindent a)
+
+In $Y$, let $(U,f)$ be an element of $\mathcal{O}_{\varphi (P),Y}$. Then by definition it pulls back to a regular function $(\varphi^{-1}(U), f \circ \varphi)$. Hence we get a well-defined map $\varphi_P^*: \mathcal{O}_{\varphi(P),Y} \to \mathcal{O}_{P,X}$.
+
+That it defines a ring homomorphism is easy to check. \qed
+
+\noindent b)
+
+If $\varphi$ is an isomorphism, that $\varphi_P^*$ defines an isomorphism of rings for all $P \in X$ is clear.
+
+Conversely suppose that $\varphi_P^*$ defines an isomorphism of rings for all $P \in X$. Then $\varphi$ preserves regular maps in both directions. But then it must also preserve the domain of every regular map, i.e. the open sets. Hence $\varphi$ is an isomorphism. \qed
+
+\noindent c)
+
+Suppose that $(U,f) \in \mathcal{O}_{\varphi(P),Y}$ such that $\varphi_{P}^* (f) = 0$. Then we get $(\varphi^{-1}(U), f \circ \varphi)$ in $X$. But then $\varphi(X)$ is dense in $Y$ such that $\varphi^{-1}(U)$ is a nonempty open set in $X$. Hence $(\varphi^{-1}(U), f \circ \varphi)$ is equivalent to $(X,0)$, such that $\varphi_P^*$ is injective for all $P \in X$. \qed
+\lspace
+
+\subsection*{Question 3.4}
+
+The result of Question 2.12 gives us that the $d$-uple embedding defines a homeomorphism. Moreover by considering the corresponding ring homomorphism $\theta: k[y_0,\dots,y_N] \to k[x_0,\dots,x_n]$ and the induced map between $K(\mathbf{P}^N)$ and $K(\mathbf{P}^n)$ it is clear to see that the $d$-uple embedding is a morphism.
+
+Now we give an explicit form for the inverse of $\rho_d$ piecewise. Consider the open set of $\mathbf{P}^N$ given by $x_i \neq 0$ (WLOG set $i=0$). Then notice that in $\mathbf{P}^n$, we have that $(x_0 : \dots : x_n) = (x_0^d : \dots : x_0^{d-1}x_n)$, such that each coordinate corresponds to a $d$-monomial and the inverse map can be explicitly defined. But then $\rho_d^{-1}$ is a morphism when restricted to each $U_i$, such that it patches to a morphism on $\mathbf{P}^N$ as regular functions also patch. \qed
+\lspace
+
+\subsection*{Question 3.5}
+
+Suppose that $Z(f) = H \subseteq \mathbf{P}^n$ is a hyperplane. Then let $\deg f = d$, and consider the $d$-uple embedding $\mathbf{P}^n \hookrightarrow \mathbf{P}^N$ as given in Question 3.4 above. Then $f$ must necessarily be mapped to a linear polynomial in $\mathbf{P}^n$, such that it defines a hyperplane. But then the complement of a hyperplane in projective space is isomorphic to affine space, such that the image of $\mathbf{P}^n \setminus H$ in $\mathbf{P}^N$ is isomorphic to a subset of an affine variety, i.e. an affine variety. \qed
+\lspace
+
+\subsection*{Question 3.6}
+
+Suppose that $\frac{f}{g} \in \mathcal{O}(X)$. Then $g$ can vanish nowhere on $\mathbf{A}^2$ except potentially at the origin. But then so must $g(c,y)$ for any constant $c$, such that the algebraic closure requires that $g(c,y)$ be a constant. By symmetry that implies that $g(x,c)$ so must be one as well such that $g$ is a constant function. Hence we get an surjection $k[x,y]\hookrightarrow \mathcal{O}(X)$, and it is easy to see that it is injective.
+
+Now, notice that the affine coordinate ring of $\mathbf{A}^2$ is also $k[x,y]$; such that by Prop 3.5 $X$ would have to be isomorphic to $\mathbf{A}^2$ were it an affine variety. But then by considering the explicit construction of the bijection given in Prop 3.5, the identity map (which is an isomorphism) on $k[x,y]$ must correspond to the inclusion map $X \hookrightarrow \mathbf{A}^2$, which is not an isomorphism. Hence we get a contradiction. \qed
+\lspace
+
+\subsection*{Question 3.7}
+
+\noindent a)
+
+Follows as a corollary of (b).
+
+\noindent b)
+
+Suppose that $Y \subseteq \mathbf{P}^n$ is a projective variety of dimension at least $1$, and $H \subseteq \mathbf{P}^n$ is a hypersurface. Then suppose that $Y \cap H = \emptyset$. Then $Y = Y \setminus H$ is isomorphic to an affine variety by the result of Q3.5, such that $Y$ is a singular point by the result of Q3.1e. But then the dimension of $Y$ is necessarily $0$, which is a contradiction. \qed
+\lspace
+
+\subsection*{Question 3.8}
+
+How do you do this $\#2$
+
+\subsection*{Question 3.9}
+
+Let the $2$-uple embedding be given explicitly by $(x:y) \mapsto (x^2:y^2:xy)$. Then the irreducible polynomial $xy - z^2$ is contained inside $I(Y)$, such that $I(Y) = \gen{xy-z^2}$ as $\dim(Y) = \dim(\mathbf{P}^1) = 1$.
+
+Hence $S(Y) \simeq k[x,y, \sqrt{xy}]$. Now if it were to be isomorphic to $k[x,y]$ via some $\phi$, notice that $\phi(x)\phi(y) - \phi(\sqrt{xy})^2=0$ necessarily. But then $\phi(x),\phi(y)$ are both still irreducible elements such that $\phi(x) = \phi(y) = \phi(\sqrt{xy})$, which is a contradiction. Hence they are not isomorphic. \qed
+\lspace
+
+\subsection*{Question 3.10}
+
+That $\varphi_{X'}$ is a continuous map is clear.
+
+Now suppose that $(U, \frac{f}{g})$ is some locally regular map in $Y'$. Then $U = C \cap \overline U$ for some closed $C \subset Y$ and open $\overline U \subseteq Y$. Then $\hat U := Y \setminus Z(g)$ is open in $Y$, such that $\frac{f}{g}$ extends to a well-defined regular function on it. But then $\frac{f}{g}$ pulls back to a regular function on $\varphi^{-1}(\hat U)$, such that it must on $\varphi^{-1}_{X'}(U)$ as well by the commutativity of the diagram. \qed
+\lspace
+
+\subsection*{Question 3.11}
+
+
+
+\subsection*{Question 3.12}
+
+
+
+\subsection*{Question 3.13}
+
+
+
+\subsection*{Question 3.14}
+
+
+
+\subsection*{Question 3.15}
+
+
+
+\subsection*{Question 3.16}
+
+
+
+\subsection*{Question 3.17}
+
+
+
+\subsection*{Question 3.18}
+
+
+
+\subsection*{Question 3.19}
+
+
+
+\subsection*{Question 3.20}
+
+
+
+\subsection*{Question 3.21}
+
+
+
+\end{document}
