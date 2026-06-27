@@ -1,0 +1,1 @@
+I am currently going through _Galois Groups and Fundamental Groups_ by Tamas Szamuely over summer 2026. I plan on doing all the exercises in the textbook, and will be posting them here as I complete each chapter.
