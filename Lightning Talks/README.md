@@ -1,0 +1,1 @@
+These are pdf versions of lightning talks I have written up for various reading groups and colloquium series I have given, that I have deemed too informal to go into the main Exposition Papers file.
