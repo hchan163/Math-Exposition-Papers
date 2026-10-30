@@ -8,5 +8,6 @@ This is a lighthearted talk meant to illustrate the guiding principles of the ar
 The talk will take approximately one hour, and some familiarity with rings and topology is assumed.
 
 Prerequisites: 
+- Linear algebra (Vector spaces, Bases)
 - Ring theory (Rings, Ideals, Homomorphisms, Quotient rings, Polynomial rings)
 - Pointset topology (Topological spaces)
