@@ -102,7 +102,7 @@ Often times we are interested in the cases where the functions have some additio
 
 \begin{itemize}
     \item In point-set topology, we are interested in studying the ring of continuous functions on a topological space.
-    \item In measure theory, we are interested in studying the ring of bounded measurable functions on $\mathbb{R}^n$.
+    \item In measure theory, we are interested in studying the (non-unital!) ring of bounded measurable functions on $\mathbb{R}^n$.
     \item In differential geometry, we are interested in studying the ring of smooth (i.e. infinitely differentiable) functions on smooth manifolds.
     \item In complex analysis, we are interested in studying the ring of holomorphic (complex-differentiable) functions on $\mathbb{C}$.
     \item In algebraic geometry, we are interested in studying the ring of polynomial functions on ??? (We will answer what this is later).
@@ -163,11 +163,17 @@ Indeed, let $I = \{f \in R : f \equiv 0 \text{ on some neighbourhood of }0\}$. T
 
 \begin{itemize}
     \item This tells us that not all topological spaces and not all rings of functions are well-suited for the algebro-geometric treatment. For those in the know, this is motivation for the  Zariski topology.
-    \item This tells us that not all topological spaces and not all rings of functions are well-suited for the algebro-geometric treatment. This motivates the  Zariski topology which we will see later.
+    %\item This tells us that not all topological spaces and not all rings of functions are well-suited for the algebro-geometric treatment. This motivates the  Zariski topology which we will see later.
 \end{itemize}
 \end{frame}
 
 \section{Building the Dictionary}
+
+\begin{frame}{An outsider's perspective of algebraic geometry}
+    \begin{center}
+        \includegraphics[width=0.6\textwidth, height=0.7\textheight]{AltHistoryMeme.png}
+    \end{center}
+\end{frame}
 
 \begin{frame}[label=Quotients]{Quotients}
     Let us further build the dictionary between topological spaces and rings, and see what kind of topological properties or operations can be detected by its ring of functions.
@@ -242,7 +248,7 @@ Indeed, let $I = \{f \in R : f \equiv 0 \text{ on some neighbourhood of }0\}$. T
         In total, this will give us $\sum_{i=0}^d (i+1) = \frac{1}{2} (d+1)(d+2)$. So the total number grows quadratically, and that tells us that the topological dimension of $\mathbb{R}^2$ is indeed $2$.
 
         \pause
-        \item For the space $S^1 = \{x^2 + y^2 = 1\}$, because of \hyperlink{Quotients}{\textcolor{blue}{what we discussed earlier on quotients}}, the polynomial function $y^2$ is equivalent to $x^2-1$. So in fact the only monomials are of the form $x^a, x^a y$.
+        \item For the space $S^1 = \{x^2 + y^2 = 1\}$, because of \hyperlink{Quotients}{\textcolor{blue}{what we discussed earlier on quotients}}, the polynomial function $y^2$ is equivalent to $1-x^2$. So in fact the only monomials are of the form $x^a, x^a y$.
 
         In total, this will give us $(d+1) + d= 2d+1$ number of linearly independent functions. So the total number grows linearly, and that tells us that the topological dimension of $S^1$ is indeed $1$.
     \end{itemize}
@@ -316,7 +322,7 @@ Indeed, let $I = \{f \in R : f \equiv 0 \text{ on some neighbourhood of }0\}$. T
 
     \begin{itemize}
         \item For those in the know, this is exactly the issue that Hilbert's Nullstellensatz fixes. That theorem is the algebraic analogue of the $C([0,1])$ example we saw earlier, and how you prove that maximal ideals correspond to (closed) points in your topological space. This is the "correct" geometric interpretation of the Nullstellensatz.
-        \item This problem will be fixed by the Nullstellensatz, which we will introduce later.
+        %\item This problem will be fixed by the Nullstellensatz, which we will introduce later.
     \end{itemize}
 \end{frame}
 
@@ -361,10 +367,10 @@ Indeed, let $I = \{f \in R : f \equiv 0 \text{ on some neighbourhood of }0\}$. T
   \visible<2->{There is one. This isn't a trick question.}
 \end{frame}
 
-\begin{frame}{Or is it?}
-    \begin{center}
-        \includegraphics[width=0.6\textwidth, height=0.7\textheight]{VSauce.png}
-    \end{center}
+\begin{frame}[c]
+  \begin{center}
+    {Or is it?}
+  \end{center}
 \end{frame}
 
 \begin{frame}{The problem}
